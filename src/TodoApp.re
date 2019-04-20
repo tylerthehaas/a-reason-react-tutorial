@@ -10,11 +10,7 @@ module TodoItem = {
   [@react.component]
   let make = (~item, ~onToggle) => {
     <div className="item" onClick={_evt => onToggle()}>
-      <input
-        type_="checkbox"
-        checked={item.completed}
-        /* TODO make interactive */
-      />
+      <input type_="checkbox" checked={item.completed} />
       {str(item.title)}
     </div>;
   };
